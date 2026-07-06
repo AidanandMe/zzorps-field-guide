@@ -1,16 +1,47 @@
-# React + Vite
+# Zzorp’s Field Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Zzorp’s Field Guide** is a child-friendly AI observation agent built for the Kaggle 5-Day AI Agents Intensive Capstone with Google.
 
-Currently, two official plugins are available:
+The project invites children to enter the **Observation Lab**, where Zzorp, a curious alien explorer, helps them notice human behaviour, ask one safety-aware follow-up question, generate a playful Field Guide report, create a comic mission, and export an Explorer Dossier.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The educational goal is to help children understand the difference between:
 
-## React Compiler
+- what they observed,
+- what they think it might mean,
+- and what kind question they could ask next.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The public version can run in **mock mode** without exposing a Gemini API key. The architecture also supports Gemini through an environment variable for local testing or a future secured backend deployment.
 
-## Expanding the ESLint configuration
+## Main feature: Observation Lab
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The main capstone feature is the **Zzorp Observation Agent**.
+
+The agentic loop is:
+
+1. Child enters a human behaviour they noticed.
+2. Zzorp checks the input for safety and privacy.
+3. Zzorp asks one adaptive follow-up question.
+4. The child answers.
+5. Zzorp generates a structured Field Guide report.
+6. The report becomes a comic mission.
+7. The child can sketch evidence and export a self-contained dossier.
+
+## Why it matters
+
+Zzorp’s Field Guide uses AI not simply to answer children, but to help them slow down, observe carefully, avoid assumptions, and practise kind curiosity.
+
+## Running locally
+
+Install dependencies with `npm install`.
+
+Start the app with `npm run dev`.
+
+Build the app with `npm run build`.
+
+
+
+It is a playful prototype, but it explores a serious question:
+
+**Can AI agents help children become more thoughtful, empathetic observers of the human world?**
+
+
