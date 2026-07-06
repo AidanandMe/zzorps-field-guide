@@ -1,0 +1,228 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: var(--star-yellow);
+  text-shadow: 0 0 10px rgba(254, 240, 138, 0.5);
+}
+
+.progress-pill {
+  background: var(--space-blue);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  border: 1px solid var(--neon-cyan);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.audio-toggle-btn {
+  background: var(--space-purple);
+  color: var(--text-main);
+  border: 1px solid var(--neon-pink);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.audio-toggle-btn:hover {
+  background: var(--neon-pink);
+  color: var(--space-dark);
+}
+
+.story-area {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+
+.restart-btn {
+  align-self: center;
+  margin-top: 30px;
+  padding: 15px 40px;
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--space-dark);
+  background: var(--star-yellow);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(254, 240, 138, 0.4);
+  transition: all 0.2s;
+  animation: pulse 2s infinite;
+}
+
+.restart-btn:hover {
+  transform: scale(1.05) translateY(-2px);
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(254, 240, 138, 0.6);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(254, 240, 138, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(254, 240, 138, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(254, 240, 138, 0); }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.2rem; }
+  .app-header { padding: 10px 15px; flex-direction: column; gap: 10px; }
+}
+
+.story-scene-image {
+  width: 100%;
+  max-width: 800px;
+  height: 25vh;
+  margin: 0 auto 10px auto;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--neon-cyan);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.story-scene-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav-btn {
+  background: var(--space-blue);
+  color: var(--text-main);
+  border: 1px solid var(--neon-cyan);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.nav-btn:hover:not(:disabled) {
+  background: var(--neon-cyan);
+  color: var(--space-dark);
+}
+
+.nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: gray;
+}
+
+.user-ending-space {
+  margin: 0 auto 10px auto;
+  padding: 15px 20px;
+  width: 100%;
+  max-width: 800px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px dashed var(--neon-cyan);
+  text-align: center;
+  border-radius: 12px;
+}
+
+.ending-textarea {
+  width: 100%;
+  max-width: 600px;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 12px;
+  background: var(--space-dark);
+  color: var(--text-main);
+  border: 1px solid var(--neon-cyan);
+  font-family: var(--font-family);
+  font-size: 1.1rem;
+  resize: vertical;
+}
+
+.ending-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 15px var(--neon-cyan);
+}
+
+.saved-ending p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 15px 0;
+  color: var(--star-yellow);
+  line-height: 1.5;
+}
+
+.ending-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-action-btn {
+  background: var(--neon-cyan);
+  color: var(--space-dark);
+  border: none;
+  box-shadow: 0 0 10px var(--neon-cyan);
+}
+.save-action-btn:hover {
+  background: #fff;
+}
+.save-action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.edit-action-btn {
+  background: transparent;
+  color: var(--neon-cyan);
+  border: 1px solid var(--neon-cyan);
+}
+.edit-action-btn:hover {
+  background: rgba(34, 211, 238, 0.2);
+}
+
+.restart-action-btn {
+  background: var(--star-yellow);
+  color: var(--space-dark);
+  border: none;
+}
+.restart-action-btn:hover {
+  background: #fff;
+}
+

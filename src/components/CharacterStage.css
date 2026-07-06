@@ -1,0 +1,78 @@
+.character-stage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  height: 25vh;
+  min-height: 180px;
+  margin-top: auto;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.character-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: bottom center;
+}
+
+.center-stage {
+  z-index: 3;
+}
+
+.character-img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--glass-border);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  background: var(--space-dark);
+  transition: all 0.3s ease;
+}
+
+.center-stage .character-img {
+  width: 150px;
+  height: 150px;
+}
+
+.character-name {
+  margin-top: -15px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  z-index: 4;
+}
+
+/* Animations based on activity */
+.active {
+  transform: scale(1.1) translateY(-10px);
+  filter: brightness(1.1);
+}
+
+.active .character-img {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 20px var(--neon-cyan), inset 0 0 10px var(--neon-cyan);
+}
+
+.active .character-name {
+  background: var(--neon-cyan);
+  color: var(--space-dark);
+  border: none;
+}
+
+.inactive {
+  transform: scale(0.9);
+  filter: brightness(0.6) grayscale(20%);
+}
+
+@media (max-width: 600px) {
+  .character-img { width: 100px; height: 100px; }
+  .center-stage .character-img { width: 140px; height: 140px; }
+  .character-stage { gap: 10px; }
+}
